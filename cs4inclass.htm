@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS4 in Class</title>
+
+	<style>
+	/* Your styles go here */
+    /* body{background-color:gainsboro;} To change background color */
+
+    body{background-image:url(music.gif); background-position: center; 
+    background-repeat: repeat; background-attachment:fixed; }
+    
+    img#beaver{position:absolute; left: 480px; top:80px;}
+
+    h4{color:yellow; font-family:arial; position:absolute; left: 480px; top:80px; z-index:1;}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+</head>
+
+<body>
+    <center><h1>Image Maps or Hot Spots</h1></center>
+
+    <map name="middlesex" id="map">
+	<area shape="rect" coords="338, 314, 360, 373" href="http://www.newtonma.gov" target="_blank" alt="City of Newton Website">
+    <area shape="rect" coords="301, 351, 330. 383" href="http://www.wellesleyma.gov" target="_blank" alt="City of Wellesley">
+        </map>
+
+    <img src="Middlesex.gif" usemap=#middlesex alt="Middlesex County Map" title="Middlesex County" />
+
+<hr/>
+    <h4>Go Beavers</h4>
+    <img id="beaver" src="beaver.jpg" alt="Babson Beaver Image" title="Go Babson"/>
+    
+
+</body>
+</html>
