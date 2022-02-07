@@ -1,0 +1,14 @@
+
+
+table, td {border: 2px solid black;}
+table{font-family: Arial, Helvetica, sans-serif; color: Navy; width: 50%;
+         margin-right:auto; margin-left:auto; background-image:url(music.gif);}
+td{border:2px solid black; text-align: center; vertical-align: top;}
+
+tr#top{background-color: yellow; font-weight: bold;}
+.firstcolumn{width: 35%;}
+.secondcolumn{width: 45%;}
+.thirdcolumn{width: 20%;}
+
+caption{font-family:Arial, Helvetica, sans-serif; text-align: center; color: navy; 
+    margin-bottom: 30px; font-weight: bold; font-size: 40px;}
