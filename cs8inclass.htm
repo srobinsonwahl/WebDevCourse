@@ -32,21 +32,21 @@
     <h1>A Simple HTML Form</h1>
 
     <form method="post" action="" enctype="text/plain">
-    <p> First Name :
+    <p> First Name:&nbsp;
     <input type="text" name="firstname"
-    maxlength="100" size="20" value="" />
+    maxlength="100" size="20" value="" placeholder="Enter first name"/>
 
-    Last Name:
+    Last Name:&nbsp;
     <input type="text" name="lastname"
-    maxlength="100" size="20" value="" />
+    maxlength="100" size="20" value="" placeholder="Enter last name" />
     </p>
 
-    <p>Age:
+    <p>Age:&nbsp;
     <input type="text" name="age"
-    maxlength="3" size="5" value="" />
+    maxlength="3" size="5" value="" placeholder="Enter age"/>
     </p>
 
-    <p>Please select the state that you are from:
+    <p>Please select the state that you are from: &nbsp;
     <select name="state">
         <option value="MA">Massachusetts</option>
         <option value="ME">Maine</option>
@@ -54,25 +54,25 @@
     </select></p>
     
 	<p>Please seelct your gender:
-    Male <input type="radio" name="gender"
+    Male&nbsp; <input type="radio" name="gender"
         value="male" />
-    Female <input type="radio" name="gender"
+    Female&nbsp; <input type="radio" name="gender"
         value="female" checked="checked" />
     </p>
 	
     <p>Which topic in Web Tech do you like (please select all that apply):<br/>
-        <input type="checkbox" name="Q1" value="HTML"/> HTML<br/>
-        <input type="checkbox" name="Q1" value="CSS" /> CSS<br/>
-        <input type="checkbox" name="Q1" value="JavaScript" /> JavaScript <br/>
-        <input type="checkbox" name="Q1" value="jQuery" /> jQuery<br/>
+        <input type="checkbox" name="Q1" value="HTML"/> &nbsp;HTML<br/>
+        <input type="checkbox" name="Q1" value="CSS" /> &nbsp;CSS<br/>
+        <input type="checkbox" name="Q1" value="JavaScript" /> &nbsp;JavaScript <br/>
+        <input type="checkbox" name="Q1" value="jQuery" /> &nbsp;jQuery<br/>
     </p>
 
-    <p>Please Provide any additoinal commnents that you might have:<br/>
+    <p>Please Provide any additoinal comments that you might have:<br/>
         <textarea name="comments" rows="5" cols="50"></textarea>
     </p>
 
     <p>
-        <input type="submit" id="button" name="submit" value="Go!" />
+        <input type="submit" id="button" name="submit" value="Go!" />&nbsp;
         <input type="reset" id="buttontwo" name="reset" value="Oh No!" />  
     </p>
     </form>
