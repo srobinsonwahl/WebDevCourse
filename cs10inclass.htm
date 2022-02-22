@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title></title>
+        
+        <style>
+            p{font-family:Arial; color:green;}
+            img{margin:auto;display:block;}
+        </style>
+        
+        
+        <script type="text/javascript">
+
+            function changeRed()
+            {
+                document.getElementById("one").style.color="red";
+                document.getElementById("one").innerHTML="Yo, I changed.";
+            }
+
+            function changeBlack()
+            {
+                document.getElementById("one").style.color="black";
+            }
+
+            function changeone()
+            {
+                document.getElementById("para").style.color="black"
+                document.getElementById("para").style.fontFamily="cursive"
+                document.getElementById("para").style.textAlign="right";
+            }
+
+            function changetwo()
+            {
+                document.getElementById("para").style.color="green"
+                document.getElementById("para").style.fontFamily="arial"
+                document.getElementById("para").style.textAlign="center";
+            }
+
+            function addBorder()
+            {
+                document.getElementById("imgone").style.border="5px solid green";
+            }
+
+            function noBorder()
+            {
+                document.getElementById("imgone").style.border="none";
+            }
+
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h4>Problem 1 - Use buttons to Change Me.</h4>
+        <h3 id="one">Change this line to a red color font.Then change it back to a black font</h3>
+        <button onclick="changeRed()">Change to Red</button> &nbsp;&NonBreakingSpace;
+        <button onclick="changeBlack()">Change to Black</button>
+        <hr/>
+
+
+
+
+        <h4>Problem 2 - Click on me to change and double click to change back</h4>
+        <!-- When you click on it, change the paragraph to sans-serif font, navy color, 
+        and align it to the right of the page. When you double click on it, change it back
+        to arial font, green color and center it on the web page. -->
+        <p id="para" onclick="changeone()" ondblclick="changetwo()">JavaScript is a client scripting language which is used 
+           for creating web pages. It is a standalone language developed in Netscape. 
+           It is used when a webpage is to be made dynamic and add special effects 
+           on pages like rollover, roll out and many types of graphics.
+        </p>
+        <hr/>
+
+
+        <h3>Problem 3 - Mouseover the image to add a border and make the border disappear on mouseout</h3>
+        <img id="imgone" onmouseover="addBorder()" onmouseout="noBorder()" src="planes.jpg" alt="Image of Planes" title="Fly High" width="400"/>
+        <hr/>
+
+    
+    </body>
+</html>
