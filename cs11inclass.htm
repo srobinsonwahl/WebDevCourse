@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>CS10 - Practicing Javascript</title>
+
+	<style type="text/css">
+
+	h1 {font-weight:bold; background-color: Silver;}
+
+	p {text-align:center;}
+
+  #picone {
+    display: block;
+    margin: auto;
+  }
+
+	</style>
+	    
+	<script type="text/javascript">
+
+    function changeTitle()
+    {
+      var x;
+      x = document.getElementById("title");
+      x.innerHTML="The title has now been changed.";
+      x.style.color="navy";
+      x.style.textAlign="center";
+      x.style.fontStyle="italic";
+    }
+
+    function mouseChange()
+    {
+      document.getElementById("mypara").style.backgroundColor="green";
+    }
+
+    function remove()
+    {
+      document.getElementById("mypara").style.backgroundColor="white";
+    }
+
+    function addBorder()
+    {
+      document.getElementById("picone").style.border="5px solid black";
+    }
+    
+    function noBorder()
+    {
+      document.getElementById("picone").style.border="none";
+    }
+
+   /*
+    {
+      var x, y;
+      x=10;
+      y=34;
+      alert (x+y);
+      alert (y-x);
+      alert (x/y);
+      alert (x*y);
+      x=40;
+      y=20;
+
+      x +=3;
+      x="shankar";
+      y=" is the greatest dude on earth";
+      alert (x+y)
+
+      x="12";
+      y="345";
+      alert (x+y);
+
+      x=10;
+      ++x;
+      alert(x);
+    }
+ 
+  */
+
+	</script>
+  </head>
+
+  <body>
+    <hr />
+	<h1 id="title"> Practice with Javascript</h1>
+    <hr />
+    <p>
+        <button onclick="changeTitle()">Click To Change Title</button>
+    </p>
+    <hr />
+   	<h1> More practice with Javascript </h1>
+    <p id="mypara" onmouseout="remove()" onmouseover="mouseChange()" style="border:3px solid red"> Mouse over me to change my color </p>
+    
+    <hr/>
+    <h1> Understanding Variables in Javascript </h1>
+    <p>
+    	<button onclick="showVar()"> Click on me to start </button>
+    </p>
+
+      <img onclick="addBorder()" ondblclick="noBorder()" id="picone" src="beaver.jpg" alt="beaver">
+
+  </body>
+</html>
