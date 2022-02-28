@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Please change the title  </title>
+        <!-- Don't worry about the styles. I just added them to make the page look better -->
+        <style type="text/css">
+            h1 {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            h1 {
+                text-align: center;
+            }
+            img {border:5px solid black; display:block; margin:auto;}
+            p {margin-right:100px; margin-left:100px; margin-bottom:50px;font-family:Arial;}
+        </style>
+
+        <script type="text/javascript">
+               
+            function showLeaf()
+            {
+                var myleaf, myimg;
+                myleaf = prompt("Enter Maple or Shamrock or Thyme or Clover.");
+                myimg = document.getElementById("b");
+                if (myleaf.toLowerCase() == "maple")
+                {
+                    myimg.src="maple.jpg";
+                    myimg.alt="Maple Leaf";
+                    myimg.title="Majestic Maple";
+                }
+                else if (myleaf.toLowerCase() == "shamrock")
+                {
+                    myimg.src="shamrock.jpg";
+                    myimg.alt="Shamrock Leaf";
+                    myimg.title="Majestic Shamrock";
+                }
+                else if (myleaf.toLowerCase() == "thyme")
+                {
+                    myimg.src="thyme.jpg";
+                    myimg.alt="Thyme Leaf";
+                    myimg.title="Majestic Thyme";
+                }
+                else if (myleaf.toLowerCase() == "clover")
+                {
+                    myimg.src="clover.jpg";
+                    myimg.alt="Clover Leaf";
+                    myimg.title="Majestic Clover";
+                }
+                else 
+                {
+                    alert("Please enter a valid option.");
+                }
+            }
+           
+           function changeImage()
+           {
+                var myimg = document.getElementById("c");
+                if ( myimg.src.match("planes.jpg") == "planes.jpg" )
+                {
+                    myimg.src = "Ships.jpg";
+                }
+                else
+                {
+                    myimg.src = "planes.jpg";
+                }
+           }
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        
+        <!-- PROBLEM TWO -->
+        <h1> Using Inputs with Conditional Statements - 2</h1>
+        <div> <p>
+            When the user clicks on the image (placeholder shown) below, ask the user to 
+            input one of 4 values: Shamrock, Clover, Thyme or Maple. Based on what the user
+            provides, show the corresponding image. The 4 images are provided to you. 
+            If you get this to work, then, what if the user types in using all-lower-case or 
+            all-upper-case? How will you change the code to cover that?
+        </p>
+        </div>
+        <div>
+        <img id="b" onclick="showLeaf()" src="" alt="Image Goes Here" title="" width="200"/>
+        </div>
+
+        <!-- END OF PROBLEM TWO.-->
+
+        <!-- PROBLEM 3- We may/not get to this in class today.-->
+        <h1> Changing the Image when you click on it</h1>
+        <div><p>
+            Given below is an image of planes. When you click on it,
+            change it to the image of ships. The way the function must work is, 
+            no matter what the image is, when you click on it, it must change to the 
+            other image. The ALT and TITLE must change appropriately.
+        </p></div>
+        <div>
+            <img onclick="changeImage()" id="c" src="planes.jpg" alt="Planes" title="Flying High" width="200"/>
+        </div>
+    
+    </body>
+</html>
