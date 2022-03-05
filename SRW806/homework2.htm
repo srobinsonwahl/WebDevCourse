@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Graded Homework 2</title>
+
+	<style>
+	
+		table {
+			font-family: Arial;
+			font-size: 20px;
+			width: 60%;
+			border: 2px solid black;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		td {
+			border: 2px solid black;
+		}
+
+		caption{
+			font-family: lucida grande ;
+			font-size: 2em;
+			color: navy;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+
+		img {
+			width: 45%;
+		}
+		
+		.price { width: 20%;}
+
+		.select { width: 25%;}
+
+		.quant { width: 20%;}
+
+		.img { width: 35%;}
+
+		.buttonp{
+			text-align: center;
+		}
+		
+		.submit {
+			height: 30px;
+			background-color: green;
+			margin-right: 5px;
+		}
+
+		.reset {
+			height: 30px;
+			background-color: yellow;
+			margin-left: 5px;
+		}
+
+		form {
+			background-image:url("brick.gif");
+			margin: 40px 200px 40px 200px;
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+	</style>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<form method="post" action="" enctype="text/plain">
+		
+		<table><caption>Catalog of Sweaters</caption>
+
+			<tr><td class="img">Product Image</td><td class="price">Product Price</td>
+				<td class="select">Product Selection</td><td class="quant">Product Quantity</td>
+			</tr>
+
+			<tr><td class="img"><img src="redsweater.jpg" alt="redsweater" title="redsweat"></td>
+				<td class="price">$35.00</td>
+				<td class="select">
+					<input type="radio" name="sweatercolor"
+					value="red" /> Red Sweater</td>
+				<td class="quant"> Quantity:
+					<input type="number" name="quantity"
+					maxlength="3" size="8" value=""/> </td>
+			</tr>
+
+			<tr><td class="img"><img src="bluesweater.jpg" alt="bluesweater" title="bluesweat"></td>
+				<td class="price">$45.00</td>
+				<td class="select">
+					<input type="radio" name="sweatercolor"	
+					value="blue"/> Blue Sweater</td>
+				<td class="quant"> Quantity:
+					<input type="number" name="quantity"
+					maxlength="3" size="8" value=""/> </td>
+			</tr>
+
+			<tr><td class="img"><img src="whitesweater.jpg" alt="whitesweater" title="whitesweat"></td>
+				<td class="price">$30.00</td>
+				<td class="select">
+					<input type="radio" name="sweatercolor"
+					value="white" /> White Sweater</td>
+				<td class="quant"> Quantity:
+					<input type="number" name="quantity"
+					maxlength="3" size="8" value=""/> </td>
+			</tr>
+
+		</table>
+		
+		
+
+		<p class="buttonp"><button class="submit">Submit Selections</button><button class="reset">Clear Selections</button></p>
+
+	</form>
+	
+	
+  </body>
+</html>
