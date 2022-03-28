@@ -8,32 +8,49 @@
     button {width:150px; height:40px; background-color:green;; font-family:arial; color:yellow;}
     div#b{text-align:center;}
 	</style>
-    <script type="text/javascript">
+    
+    <script>
         
-        var imgs = newArray("tiger5.jpg, tiger6.jpg, tiger7.jpg, tiger8.jpg");
+        var imgstoshow = new Array ("tiger5.jpg", "tiger6.jpg", "tiger7.jpg", "tiger8.jpg");
+        var caps = new Array ("This is Webtech", "This is Fun", "Teaches me Everything", "Under the Sun");
+        var imgcols = new Array ("Blue", "Red", "Green", "Orange");
         var ctr = 0;
-
+        
+        
         function showSlides()
         {
             var myimg = document.getElementById("daimg");
-            myimg.src = imgs[ctr];
+            myimg.src = mimgstoshow[ctr];
+            myimg.style.boxShadow = "20px 20px 10px " + imgcols[ctr];
+            document.getElementById("h").innerHTML = caps[ctr];
             ++ ctr; /* can also be written as  ctr = ctr + 1; */
-            if (ctr > imgs.length - 1)
+            if (ctr > imgstoshow.length - 1)
             {
                 ctr = 0;
             }
-            setTimeout("showSlides()", 2000);
+            setTimeout("showSlides()", 1000);
+        }
+        
+
+        function ssran()
+        {
+            var myimg = document.getElementById("daimg");
+            var c;
+            c = Math.floor(Math.random() * imgstoshow.length);
+            myimg.src = imgstoshow[c];
+            document.getElementById("h").innerHTML = caps[c];
+            myimg.style.boxShadow = "10px 10px 20px " + imgcols[c];
         }
 
     </script>
 </head>
-<body onload="showSlides()">
+<body onload="ssran()">
     <p>
     
     <img id="daimg" src="tiger5.jpg" alt="Slide Show of Tigers" title="Tigers"/>
     
     </p>
-    <h3></h3>
+    <h3 id="h"></h3>
     <!-- The above h3 will be used for showing a caption, if needed.-->
     <div id="b">
         <button>Click to stop/resume</button>

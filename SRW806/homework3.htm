@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Homework 3 - processing forms</title>
+
+	<style>
+	/* Your styles go here */
+    form {background-color:silver; font-family:Arial; color:Navy;
+    padding-left:50px; padding-top:20px; padding-bottom:20px;
+    margin-right:auto; margin-left:auto; width:60%;}
+    .but {width:200px; height:60px; background-color:magenta; color:black;}
+    p#desc {margin:50px 200px; font-family:cursive; }
+    h3 {font-family:lucida handwriting; font-size:3em; text-align:center;}
+
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+
+		function doConvert()
+		{
+			event.preventDefault();
+			var myf = document.getElementById("f");
+
+			if ( (myf.product.value == "") || (myf.quantity.value == "") )
+			{
+				alert("Please choose from either Milk, Apple, or Fish, and enter a quantity.");
+				/* this checks if a field is left blank */
+			}
+			else if (isNaN(myf.quantity.value) == true)
+			{
+				alert("Please enter a number for quantity.");
+			}
+			else 
+			{
+				if (myf.product.value == "milk")
+				/*I have been trying to do if (toLowerCase(my.product.value) == "milk")
+				and so on for the other products to get the text to automatically go to
+				lower case, but it's not working.  This is the best I could get with this
+				form without making errors. */
+				{
+					myf.amount.value = myf.quantity.value * 3.5;
+				}
+				else if (myf.product.value == "apple") 
+				{
+					myf.amount.value = myf.quantity.value * 0.99;
+				}
+				else if (myf.product.value == "fish")
+				{
+					myf.amount.value = myf.quantity.value * 5.99;
+				}
+				else 
+				{
+					alert("Please enter the correct product provided.")
+				}
+			}
+		}
+
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+<h3> Homework 3</h3>
+<p id="desc">
+    The form given below has 3 fields. Let us assume that the user will type in
+    the name of one of 3 products: Milk, Apple, or Fish. The user may enter these 
+    using any mix of cases, so be aware. You need to check to ensure that the user
+    enters a value. If it is not one of these 3, let the user know. 
+    Then the user will enter a quantity. You need to check to ensure that a quantity is entered 
+	(you may assume that 0 is a valid quality) and that the value is numeric. 
+    Once validated, use the following costs - 1 bottle of milk is $3.50; one 
+    apple is $0.99 and one pound of fish is $5.99 - and show the amount owed
+    in the third field. All of this should be done when the appropriate 
+    button is pressed.     
+</p>
+<form id="f" action="" method="POST">
+	<p class="topform">
+		<input type="text" name="product" value="" size="20" placeholder="Enter product..."/>
+		&nbsp; &nbsp;&nbsp;
+		<input type="text" name="quantity" value="" size="20" placeholder="Enter quantity.."/>
+	</p>
+	<p class="display">
+		<input type="text" name="amount" value="" size="20" placeholder="show amount due"/>
+	</p>
+	<p class="buttons">
+		<input onclick="doConvert()" class="but" type="submit" name="submit" value="What Do I Owe"/>
+		&nbsp; &nbsp;&nbsp;
+		<input class="but" type="reset" name="reset" value="Clear All"/>  
+	</p>
+</form>
+	
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Scrolling Text</title>
+
+	<style>
+
+		h1 {text-align: center; margin-left: auto; margin-right: auto;}
+		h2#a {position: absolute; top: 50px; color: darkslategray ; font-weight: bold; font-family: "overpass";}
+		.b {font-weight: 500; color: red; background-color: lightgray;}
+
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+
+		var pos = 1200;
+		var runflag, mycontrol;
+
+		function scrollText()
+		{
+			runflag = 1;
+			var mytxt = document.getElementById("a");
+			mytxt.innerHTML = "This is the first line";
+			mytxt.style.left = pos + "px";
+			pos = pos - 10;
+			if (pos < 100)
+			{
+				pos = 1200;
+			}
+			mycontrol = setTimeout("scrollText()", 50);
+		}
+
+		function startStop()
+		{
+			if (runflag == 1)
+			{
+				runflag == 0;
+				clearTimeout(mycontrol);
+			}
+			else
+			{
+				mycontrol = setTimeout("scrollText()", 50);
+			}
+		}
+
+
+	</script>
+  </head>
+
+  <body onload="scrollText()">
+	<!-- Your HTML goes here -->
+	<h1><span class="b">BREAKING NEWS</span> - This is a scrolling text!</h1>
+
+	
+	<h2 id="a"></h2>
+
+	<button class="strt" onclick="startStop()">Start/Stop</button>
+
+  </body>
+
+</html>
