@@ -19,7 +19,7 @@
 	
 	<script>
 	/* Your JavaScript goes here */
-		
+
 		function doConvert()
 		{
 			event.preventDefault();
@@ -34,23 +34,21 @@
 			{
 				alert("Please enter a number for quantity.");
 			}
-			else
+			else 
 			{
-				toLowerCase(myf.product.value);
+				if (toLowerCase(myf.product.value) == "milk")
 				/*I have been trying to do if (toLowerCase(my.product.value) == "milk")
 				and so on for the other products to get the text to automatically go to
 				lower case, but it's not working.  This is the best I could get with this
 				form without making errors. */
-
-				if (myf.product.value == "milk")
 				{
 					myf.amount.value = myf.quantity.value * 3.5;
 				}
-				else if (myf.product.value == "apple") 
+				else if (toLowerCase(myf.product.value) == "apple") 
 				{
 					myf.amount.value = myf.quantity.value * 0.99;
 				}
-				else if (myf.product.value == "fish")
+				else if (toLowerCase(myf.product.value) == "fish")
 				{
 					myf.amount.value = myf.quantity.value * 5.99;
 				}
@@ -89,7 +87,7 @@
 		<input type="text" name="amount" value="" size="20" placeholder="show amount due"/>
 	</p>
 	<p class="buttons">
-		<input onclick="doConvert()" onclick="makeLc()" class="but" type="submit" name="submit" value="What Do I Owe"/>
+		<input onclick="doConvert()" class="but" type="submit" name="submit" value="What Do I Owe"/>
 		&nbsp; &nbsp;&nbsp;
 		<input class="but" type="reset" name="reset" value="Clear All"/>  
 	</p>
