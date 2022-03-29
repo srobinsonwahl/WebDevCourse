@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Change this title</title>
+
+	<style>
+	/* Your styles go here */
+	form {width:60%; background-color:white;color:navy; font-family:Arial;
+	padding-left:100px; padding-top:50px; padding-bottom:50px; margin:50px 200px;}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+        
+		function myFunction()
+		{
+			event.preventDefault();
+			var strings = document.getElementById("f");
+			
+			/* this takes care of the drop down */
+
+			var mycolor = strings.colors.value;
+
+			if (mycolor == "null")
+			{
+				alert("Please select a color from the drop down.")
+			}
+			else 
+			{
+				strings.style.backgroundColor = mycolor
+			}
+
+			/* this takes care of the radio buttons */
+
+			var myborder = 0;
+			var i;
+
+			for (i = 0; i < strings.bdr.length; ++i)
+			{
+				if (strings.bdr[i].checked == true)
+				{
+					myborder = strings.bdr[i].value;
+				}
+			}
+			if (myborder == 0)
+			{
+				alert("Please select a border from the buttons.")
+			}
+			else 
+			{
+				strings.style.borderStyle = myborder;
+			}
+			
+			/* this takes care of the checkboxes */
+
+			var myanimal = 0;
+			var x;
+
+			for (x = 0; x < strings.animal.length; ++x)
+			{
+				if (strings.animal[x].checked == true)
+				{
+					if (myanimal == 0)
+					{
+						myanimal = strings.animal[x].value;
+					}
+					else
+					{
+						myanimal = myanimal + "," + strings.animal[x].value;
+					}
+				}
+			}
+			
+			/* For loop ends*/
+			
+			if (myanimal == 0)
+			{
+				alert("Please select an animal from the checkbox.");
+			}
+			else 
+			{
+				strings.results.value = myanimal;
+			}
+		}
+
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> To demonstrate getting values from drop-down, radio button, and checkboxes</h1>
+	<form id="f" action="" method="POST">
+		<p>
+			Select the color you would like for the form:<br/>
+			<select name="colors">
+				<option value="null">Please select a color</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+				<option value="red">Red</option>
+			</select>
+        </p>
+        <p>
+            Select a border type from choices below: <br/>
+            <input type="radio" name="bdr" value="solid">&nbsp;Solid &nbsp;&nbsp;
+            <input type="radio" name="bdr" value="ridge">&nbsp;Ridge &nbsp;&nbsp;
+            <input type="radio" name="bdr" value="dashed">&nbsp;Dashed &nbsp;&nbsp;
+            <input type="radio" name="bdr" value="double">&nbsp;Double
+        </p>
+		<p>
+			Select all the animals that you like:<br/>
+			<input type="checkbox" name="animal" value="tiger"/>&nbsp;Tiger <br/>
+			<input type="checkbox" name="animal" value="lion"/>&nbsp;Lion <br/>
+			<input type="checkbox" name="animal" value="cheetah"/>&nbsp;Cheetah <br/>
+			<input type="checkbox" name="animal" value="leopard"/>&nbsp;Leopard <br/>
+		</p>
+		<p>
+			<textarea name="results" cols="40" rows="5"></textarea>
+		</p>
+		<p>
+			<input onclick="myFunction()" class="but" type="submit" name="submit" value="Do Something"/>
+			&nbsp;&nbsp;&nbsp;
+			<input class="but" type="reset" name="reset" value="Reset Form"/>
+		</p>
+	</form>
+	
+  </body>
+</html>
