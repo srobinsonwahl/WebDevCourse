@@ -1,0 +1,36 @@
+.overlay {
+    display: inline-block;
+    align-items: center;
+    font-size: 14px;
+    font-family: "overpass", sans-serif;
+    color: #ecf0f1;
+    padding-bottom: 0px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-top: 40px;
+    width: 100%;
+    background-image: url(https://thump-images.vice.com/images/articles/meta/2015/1/27/joe-muggs-industrial-techno-1422359050730.jpg?crop=1xw:0.8929004854368932xh;center,center&resize=1200:*);
+  }
+
+  h2,h1 {
+    background: transparent;
+    }
+
+  h2 {
+    text-shadow:  2px 5px #fe2c54, 6px 6px #fe2c54;
+  }
+
+  h1 {
+    padding-bottom: 20px;
+  }
+
+  .container {
+    width: 90%;
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+
+  }
