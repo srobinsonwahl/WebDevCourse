@@ -42,15 +42,15 @@
 				lower case, but it's not working.  This is the best I could get with this
 				form without making errors. */
 
-				if (myf.product.value == "milk")
+				if (myf.product.value.toLowerCase() == "milk")
 				{
 					myf.amount.value = myf.quantity.value * 3.5;
 				}
-				else if (myf.product.value == "apple") 
+				else if (myf.product.value.toLowerCase() == "apple") 
 				{
 					myf.amount.value = myf.quantity.value * 0.99;
 				}
-				else if (myf.product.value == "fish")
+				else if (myf.product.value.toLowerCase() == "fish")
 				{
 					myf.amount.value = myf.quantity.value * 5.99;
 				}

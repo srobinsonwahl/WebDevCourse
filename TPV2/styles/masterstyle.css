@@ -28,19 +28,97 @@ img#crowd{
 .firstblock{
     display: flex;
     align-items: center;
-    padding-bottom: 40px;
+    margin-left: 45px;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    border-top: 4px #fe2c54 solid;
+    border-left: 4px #fe2c54 solid;
+    border-radius: 5px;
+    width: 60%;
 }
 
-.firstblock.pimg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.firstblock:hover{
+    box-shadow: 5px 5px #ecf0f1;
+    border-radius: 5px;
 }
 
-.firstblock.summary {
-    display: flex;
-    align-items: center;
+.secondblock{
+    display: block;
+    margin-left: auto;
+    margin-right: 45px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    border-top: 4px #fe2c54 solid;
+    border-right: 4px #fe2c54 solid;
+    border-radius: 5px;
+    width: 60%;
 }
+
+.secondblock:hover{
+    box-shadow: -5px 5px #ecf0f1;
+    border-radius: 5px;
+}
+
+.imageblocktop {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-left: 1020px;
+    margin-right: 50px;
+    margin-top: 120px;
+    margin-bottom: auto;
+    border: 5px solid white;
+    border-radius: 5px;
+    background:white;
+    box-shadow: 5px -5px darkslategrey;
+    max-width: 30%;
+}
+
+.imageblockone {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom: auto;
+    border: 5px solid white;
+    border-radius: 5px;
+    background:white;
+    box-shadow: 5px 5px darkslategrey;
+    max-width: 30%;
+}
+
+.imageblocktwo {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    margin-left: 1020px;
+    margin-right: 50px;
+    margin-top: 70px;
+    margin-bottom: auto;
+    border: 5px solid white;
+    border-radius: 5px;
+    background:white;
+    box-shadow: 5px -5px darkslategrey;
+    max-width: 30%;
+}
+
+/*
+.caption {
+    text-align: center;
+    font-family: 'overpass';
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: auto;
+    background: white;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fe2c54;
+}
+*/
 .image {
     flex-basis: 500%;
 }
@@ -82,13 +160,14 @@ hr#line {
 .summary {
     font-family: "overpass", sans-serif;
     color:#ecf0f1;
-    text-align: left;
     font-size: 30px;
     padding-left: 80px;
     padding-top: 60px;
-    padding-bottom: 20px;
-    padding-right: 200px;
+    padding-bottom: 60px;
+    padding-right: 80px;
     text-shadow: 2px 2px #fe2c54;
+    text-align: center;
+    background: #202020;
 }
 
 img#gif {
@@ -98,3 +177,81 @@ img#gif {
     padding-top: 50px;
     width: 190%;
 }
+
+.homesummary {
+    font-family: "overpass", sans-serif;
+    color:#ecf0f1;
+    text-align: left;
+    font-size: 30px;
+    padding-left: 80px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-right: 200px;
+    text-shadow: 2px 2px #fe2c54;
+}
+
+.homeblock{
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.homeblock.pimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeblock.summary {
+    display: flex;
+    align-items: center;
+}
+
+#dot 
+{
+    width: 100%;
+}
+
+footer
+{
+    text-align: center;
+    margin-left: 26%;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-family: 'overpass';
+    font-size: 20px;
+    color: #ecf0f1;
+}
+
+.row
+{
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.left
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 300px;
+}
+
+.right
+{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 300px;
+}
+
+#privacy {
+    text-align: center;
+    color: #fe2c54;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'overpass';
+    font-size: 14px;
+    display: block;
+    padding-bottom: 20px;
+}
+
