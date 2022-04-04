@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Q3-Midterm-2022</title>
+
+	<style>
+	/* Your styles go here */
+    form {background-color:silver; font-family:arial; color:navy;width:60%;
+    margin-left:auto; margin-right:auto; padding:50px 100px 50px 100px;}
+    p#B, h1 {text-align:center;}
+    p#q {margin-left:225px; margin-right:200px; font-family:cursive; color:navy;}
+    span{text-decoration:underline; font-weight:bold; font-style:italic;}
+    .field {height:30px;}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+
+        function convert()
+        {
+            var sel = document.getElementById("f").toconvert;
+            var o = document.getElementById("f").original;
+            var c = document.getElementById("f").converted;
+
+            event.preventDefault();
+
+            if (sel.value == "nothing")
+            {
+                alert("Please select a valid option from the drop down.");
+                o.value = 0;
+                c.value = 0;
+            }
+            else if (sel.value == "M2K")
+            {
+                if (o.value == "")
+                {
+                    alert("Please enter a value to convert.");
+                }
+                else if ( (o.value < 1000) || (o.value > 3000) )
+                {
+                    alert("Please enter a value that is between 1000.00 and 3000.00");
+                }
+                else if (isNaN(o.value) == true)
+                {
+                    alert("Please only enter a numerical value to convert.");
+                }
+                else if (c.value != 0)
+                {
+                    alert("Please only enter a numerical value in the top field.");
+                }
+                else 
+                {
+                    o.value = o.value + "  miles";
+                    c.value = (parseFloat(o.value) * 1.5).toFixed(2) + "  km";
+                }
+            }
+            else if (sel.value == "K2M")
+            {
+                 if (o.value == "")
+                {
+                    alert("Please enter a value to convert is numerical,");
+                }
+                else if ( (o.value < 1000) || (o.value > 3000) )
+                {
+                    alert("Please enter a value that is between 1000.00 and 3000.00");
+                }
+                else if (isNaN(o.value) == true)
+                {
+                    alert("Please only enter a numerical value to convert.");
+                }
+                else if (c.value != 0)
+                {
+                    alert("Please only enter a numerical value in the top field.")
+                }
+                else 
+                {
+                    o.value = o.value + "  km";
+                    c.value = (parseFloat(o.value) * 0.6667).toFixed(2) + "   miles"
+                }
+            }
+        }
+        
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1> Convert and Alert </h1>
+    <p id="q">
+        You are given a form below with a drop-down for selecting the 
+        type of conversion (miles to km or km to miles), and text boxes to show 
+        the original value that the user entered and the converted value. 
+        When the Convert It button is clicked: <br/>
+        (a) If the conversion type is not selected, let the user know to that 
+        a conversion type should be selected and set the two values to 0.0 (5). <br/>
+        (b) <span>The User will not enter a value to convert in the field. That field
+        is for "display" only. Ask </span> the user to enter the value to be converted. 
+        <span>Make sure that it is 
+        not blank, it is numerical, and it is between 1000.00 and 3000.00</span>. 
+        Provide appropriate error messages for each error (9).<br/>
+        (c) Show the value that the user entered in the first text box with 
+        appropriate units (km or miles)(3).<br/> 
+        (d) Show the computed value in the second box with the appropriate
+        units (km or miles). To convert Km to Miles, multiply by (2/3). To
+        go the other way, multiply by (3/2) <br/>
+          
+    
+        
+    </p>
+	<form id="f" action="" method="POST">
+        <p>
+            <select class="field" name="toconvert">
+                <option value="nothing" selected="selected">Please select a conversion</option>
+                <option value="M2K">Miles to Kilometers</option>
+                <option value="K2M">Kilometers to Miles</option>
+            </select>
+            &nbsp;&nbsp;
+        </p>
+        <p>
+            Value Entered By User:&nbsp; <input class="field" type="text" name="original" size="60" placeholder="For display of user-entered value only. Do not type here"/>
+        </p>
+        <p>
+            Converted Value: &nbsp;<input class="field" type="text" name="converted" size="60" placeholder="For display only. Show converted value here"/>
+        </p>
+        <p id="B">
+            <input onclick="convert()" class="field" type="submit" name="submit" value="Convert It"/> &nbsp;&nbsp;
+            <input class="field" type="reset" name="reset" value="Clear All"/>
+        </p>
+
+    </form>
+
+	
+	
+	
+  </body>
+</html>

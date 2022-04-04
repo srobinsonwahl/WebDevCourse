@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Q2-Midterm-2022</title>
+
+	<style>
+	/* Your styles go here */
+	div {height:60px; width:200px; margin-left:150px; margin-right:150px; margin-top:30px;border:2px dashed black;display:inline-block;}
+    h1 {margin-bottom:50px; text-align:center; font-family:Arial; color: red;}
+    h3 {margin-left:30px;}
+	img {width:200px; height:100px; border:3px ridge black; display:block; margin-left:auto; margin-right:auto; margin-bottom:50px;}
+	p {margin-left:100px; margin-right:100px; margin-bottom:50px; font-family:cursive; color:navy;}
+	</style>
+	<script>
+	/* Your JavaScript goes here */
+	
+	function doIt(a)
+	{
+		var x = document.getElementById(a);
+
+		if (a == "blue")
+		{
+			x.style.backgroundColor = "blue";
+			document.getElementById("picbox").src = "blue.jpg";
+			document.getElementById("titlechange").innerHTML = "BLUE";
+			document.getElementById("green").style.backgroundColor = "white";
+			document.getElementById("yellow").style.backgroundColor = "white";
+		}
+		else if (a == "green")
+		{
+			x.style.backgroundColor = "green";
+			document.getElementById("picbox").src = "green.jpg";
+			document.getElementById("titlechange").innerHTML = "GREEN";
+			document.getElementById("blue").style.backgroundColor = "white";
+			document.getElementById("yellow").style.backgroundColor = "white";
+		}
+		else 
+		{
+			x.style.backgroundColor = "yellow";
+			document.getElementById("picbox").src = "yellow.jpg";
+			document.getElementById("titlechange").innerHTML = "YELLOW";
+			document.getElementById("green").style.backgroundColor = "white";
+			document.getElementById("blue").style.backgroundColor = "white";
+		}
+	}
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<h1 id="titlechange">Color It!! (Change this) </h1>
+    <p> There are 3 boxes below, each with a color. The following should change when you mouseover
+		each box: <br/>
+		(a) Change the color of that box to the color specified within the box. Only that box
+		should have a color. All other boxes must be white. (6) <br/>
+		(b) Change the title (Color It) to that color name -- for example, if you mouseover the first box, 
+		the heading should say "BLUE" instead of "Color It". (4) <br/>
+		(c) There are 3 images and an image holder given to you. Display the image corresponding to 
+		the color within the box. The image must have a title defined. Do not change the alt. (4) <br/> 
+		(d) Write it as a single function for full credit or for 20 points, use as many functions as you
+		see fit.
+    </p>
+
+	<img id="picbox" src="" alt="This is where the image is displayed" title="Change this"/>
+	<div onmouseover="doIt(this.id)" id="blue">
+		<h3> I am blue</h3>
+	</div>
+	<div onmouseover="doIt(this.id)" id="green">
+		<h3> I am green</h3>
+	</div>
+	<div onmouseover="doIt(this.id)" id="yellow">
+		<h3> I am yellow</h3>
+	</div>
+	
+	
+	
+  </body>
+</html>
