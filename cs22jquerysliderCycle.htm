@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title>jQuery Slider - Cycle</title>
+        
+        
+        
+        <style type="text/css">
+            /* The styles go here*/
+        
+            
+        </style>
+        
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js" ></script>
+        <script type="text/javascript" src="jquery.cycle2.min.js"></script>
+        <script type="text/javascript">    
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        <!-- Make sure the images are all about the same size. In this example -->
+        <!-- I have intentionally added tiger5.jpg that is bigger than the first -->
+        <!-- four. You can see how the slide-show becomes big for slide 5. When you -->
+        <!-- have this on a page with content, the content tends to shift because of -->
+        <!-- using images of different sizes. Paint works to resize images. -->
+
+            <div class="cycle-slideshow"
+            data-cycle-fx=scrollHorz
+            data-cycle-timeout=2000
+            data-cycle-caption="#alt-caption"
+            data-cycle-caption-template="{{alt}}">
+                <img src="tiger1.jpg" title="Tiger 1" alt="Good Tiger"     width="1000"     height="700"/>
+                <img src="tiger2.jpg" title="Tiger 2" alt="Bad Tiger"      width="1000"      height="700"/>
+                <img src="tiger3.jpg" title="Tiger 3" alt="Dirty Tiger"    width="1000"    height="700"/>
+                <img src="tiger4.jpg" title="Tiger 4" alt="Nice Tiger"     width="1000"     height="700"/>
+                <img src="tiger5.jpg" title="Tiger 5" alt="Pretty Tiger"   width="1000"   height="700"/>
+                <img src="tiger6.jpg" title="Tiger 6" alt="Massive Tiger"  width="1000"  height="700"/>
+                <img src="tiger7.jpg" title="Tiger 7" alt="Peaceful Tiger" width="1000" height="700"/>
+            </div>
+
+            <div id="alt-caption" class="center"></div>
+
+    </body>
+</html>
