@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>HW4 - Final Homework</title>
+        
+        <style type="text/css">
+
+            td img {width:80%;}
+            table {float:left; width:20%;}
+            h1 {text-align:center; color: Navy; font-family:Arial;}
+            p {font-family:cursive, sans-serif, arial; color: navy; margin:20px 100px 20px 100px;}
+
+            .a { border-color: black;}
+            .b { border-color: green;}
+
+            #big { width: 300px; height: 300px; display: inline; text-align:center; margin-left: 300px;}
+
+        </style>
+        
+        <!-- Make sure you add the link to the external jquery library, jquery.min.js, here -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+        <!-- Make sure you add the script tag here and add the $(function(){}) here. You would need
+        this to write the jQuery functions to complete this homework. -->
+
+        <script>
+
+            $(function() {
+
+                /* Question 1 Code: */
+                $("p#one").mouseover (function()
+                {
+                    $("p#one").css({"color" : "yellow", "background-color" : "darkblue"});
+                });
+
+                $("p#one").mouseout (function()
+                {
+                    $("p#one").css({"color" : "black", "background-color" : "white"});
+                });
+
+                /* Question 2 Code: */
+                $("span#twob").click (function()
+                {
+                    $("span#twoa").toggle({"duration" : "3000ms"});
+                });
+
+                /* Question 3 Code */
+                $("button#q3button").click (function()
+                {
+                    if($("p#q3p").text() == "I am Changed") 
+                    {
+                        $("p#q3p").text("Please Change Me");
+                        $("p#q3p").css("border-color", "black");
+                    }
+                    else
+                    {
+                        $("p#q3p").text("I am Changed");
+                        $("p#q3p").css("border-color", "green");
+                    }
+                });
+
+                /* Question 4 Code */
+                $("img").click (function()
+                {
+                    $(this).removeClass();
+                    $(this).addClass("bigpic");
+                    $("img#big").attr(this)
+                });
+
+            });
+
+        </script>
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1> Homework 4 - jQuery </h1>
+
+        <h2> Question 1 </h2>
+        <p id="one" style="border:2px solid black"> This is a paragraph. Use jQuery to create the 
+            functionality whereby when you mouse over the paragraph it changes the font to yellow and the
+            background to dark blue. When you mouse out, the font should go back to being black and the
+            background to white. 
+        </p>
+        <hr/>
+
+        <h2> Question 2</h2>
+        <p> Below are two words "Appear" and "Magic". If you click on "Magic", "Appear" should disappear.
+            If you click on Magic again, "Appear" should appear. Use jQuery to complete this. Set the 
+            time elapsed to 3000 microseconds.
+        </p>
+        <h2><span id="twoa"> Appear! </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="twob">Magic!!!</span> </h2>
+        <hr/>
+
+        <h2> Question 3</h2>
+        <p> Please add the functionality whereby when you click on the button, the text inside the box
+            changes to "I am Changed" and the border becomes Babson green. When you click again, change
+            the text back to "Please Change Me" and the border color back to black.
+        </p>
+
+        <p id="q3p" style="border:2px dashed black; text-align:center; font-family:Lucida Sans; font-size:1.5em">
+         <br>Please Change Me <br/><br>
+        </p>
+
+        <button id="q3button" style="height:20px;font-family:Arial;display:block; margin-right:auto; margin-left:auto;">
+            Click me to change text above
+        </button>
+
+        <hr/>
+        <h2>Question 4</h2>
+        <p> Please use jQuery to create a functionality whereby if you click on any of the two thumbnail
+            images below, the image is shown enlarged in the space next to the images. You can decide
+            how large the enlarged image should be. </p>
+        <table>
+            <tr>
+                <td><img id="pic1" class="" src="babsonwhiteflowers.jpg" alt="Babson in Spring" title="Babson White"/></td>
+                <td><img id="pic2" class="" src="northendlights.jpg" alt="North End at night" title="Boston North End"/></td>
+            </tr>
+        </table>
+
+        <img id="big" class="" src="" alt=" " title="">
+        
+    </body>
+</html>
