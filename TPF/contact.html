@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Techno Gyár - Contact Us</title>
+    <meta name="keywords" content="what is techno; genres of techno; electronic music; techno factory; techno music; techno explained; 
+                                  techno gyar; contact techno gyar; communicate techno gyar;">
+    <meta name="description" content="An all-about guide to undercovering the richness
+                                      and depth of Techno music.  Brought to you by
+                                      Techno Gyár :) ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/masterstyle.css">
+    <link rel="stylesheet" href="styles/contentstyle.css">
+
+
+  <style>
+
+    form{font-family: "overpass"; color: #fe2c54;
+        width: 70%; margin-left: 13%;
+        margin-right: 10%; padding-left: 8%; padding-top: 3%; 
+        padding-bottom: 30px; padding-right: 8%;
+       }  
+
+    input {
+      background-color: #ecf0f1;
+      color: #fe2c54;
+      font-family: "overpass";
+      font-size: 16px;
+    }
+
+    select {
+      background-color: #ecf0f1;
+      color: #fe2c54;
+      font-family: "overpass";
+      font-size: 16px;
+    }
+
+    textarea {
+      background-color: #ecf0f1;
+      color: #fe2c54;
+      font-family: "overpass";
+      font-size: 16px;
+    }
+
+    #button{
+      margin-bottom: 10px;
+      margin-top: 10px;
+      padding: 5px;
+    }
+
+    #buttontwo{
+      margin-bottom: 10px;
+      margin-top: 10px;
+      padding: 5px;
+    }
+
+    input#button{background-color: lightpink;}
+    input#buttontwo{background-color: lightslategrey;}
+
+    p {
+      text-align: center;
+      font-weight: 500;
+      font-size: 20px;
+      background-color: #ecf0f1;
+      box-shadow: #fe2c54 6px 6px;
+      border-radius: 0px;
+    }
+
+    br {
+      margin-bottom: 7px;
+    }
+
+    .title {
+      font-family: "overpass";
+      color: #ecf0f1;
+      font-weight: 500;
+      text-shadow: #fe2c54 3px 3px;
+      padding-left: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0px;
+      text-align: center;
+      font-size: 64px;
+      padding-top: 40px;
+    }
+
+  </style>
+
+  <script type="text/javascript">
+
+    /* This function corresponds to #3 */
+    function validate()
+    {
+      var a = document.getElementById("f");
+      var nameone = a.firstname;
+      var nametwo = a.lastname;
+      var conta = a.contact;
+      var reas = a.reason;
+      var summ = a.checker;
+      var des = a.comments;
+      
+      event.preventDefault();
+
+      if ( (nameone.length == 0) || (isNaN(nameone.value) == false) )
+      {
+        alert("Please enter a name in valid text.");
+      }
+      else if ( (nametwo.length == 0) || (isNaN(nametwo.value) == false) )
+      {
+        alert("Please enter a last name in valid text.");
+      }
+      else if (conta.value == "")
+      {
+        alert("Please enter the best method of contact.");
+      }
+      else if (reas.value == "oops")
+      {
+        alert("Please select from one of the reasons for contact.");
+      }
+      else if (summ.value == "no")
+      {
+        alert("Please select from one of the summaries for contacting Techno Gyar.")
+      }
+      else if ( (des.value.length == 0) || (des.value.length > 150) )
+      {
+        alert("Please enter a comment between 0 and 150 characters.")
+      }
+      else
+      {
+        alert("Your form has been submitted successfully.  Thank you for reaching out to Techno Gyar!")
+      }
+    }
+
+  </script>
+
+
+</head>
+
+  <body>
+    <header>
+        <a href="index.html"><img alt="logo" src="images/techno.png"></a> 
+        <nav>
+            <ul class="navlinks">
+                <li><a href="industrial.html">Industrial</a></li>
+                <li><a href="detroit.html">Detroit</a></li>
+                <li><a href="techhouse.html">Tech House</a></li>
+                <li><a href="minimal.html">Minimal</a></li>
+                <li><a href="trance.html">Trance</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><button>Contact</button></a>
+    </header>
+
+    <hr>
+
+    <div class="container">
+      <div class="overlay">
+       <h2>Fill out a Techno Gyár Contact Form.</h2><br>
+   </div>
+   </div>
+
+   <hr id="line">
+
+    <form id="f" action="" method="post" enctype="text/plain">
+      <p> First Name :
+      <input type="text" name="firstname"
+      maxlength="100" size="20" value="" />
+  
+      Last Name:
+      <input type="text" name="lastname"
+      maxlength="100" size="20" value="" />
+      </p> <br>
+
+      <p>Please select your preferred method of communication:
+        Email <input type="radio" name="method"
+            value="email" />
+        Phone <input type="radio" name="method"
+            value="phone" checked="checked" />
+        </p> <br>
+  
+      <p>Email/Phone:
+      <input type="text" name="contact"
+      maxlength="50" size="50" value="" />
+      </p> <br>
+  
+      <p>Please select the reason for contacting:
+      <select name="reason">
+          <option selected value="oops">Please select from the following:</option>
+          <option value="bus">Business</option>
+          <option value="per">Personal</option>
+          <option value="oth">Other</option>
+      </select></p> <br>
+      
+    
+      <p>If you could summarize your reason for contacting, choose all that apply: <br/>
+          <input type="checkbox" name="checker" checked value="no"/> Does Not Apply <br/>
+          <input type="checkbox" name="checker" value="copyright"/> Copyright Claim <br/>
+          <input type="checkbox" name="checker" value="advice" /> Advice <br/>
+          <input type="checkbox" name="checker" value="marketing" /> Marketing <br/>
+          <input type="checkbox" name="checker" value="question" /> General Question <br/>
+          <input type="checkbox" name="checker" value="remarks" /> Critique <br/>
+      </p>
+  
+      <p>At the best of your ability, please describe your request from Techno Gyár: <br/>
+          <textarea name="comments" rows="5" cols="50"></textarea>
+      </p>
+  
+      <p>
+          <input onclick="validate()" id="button" type="submit" name="submit" value="Submit" />
+          <input type="reset" id="buttontwo" name="reset" value="Reset" />  
+      </p>
+      </form>
+
+      <hr id="line">
+
+      <footer>
+        <table class="ft">
+          <tr class="top"><td class="left">Links:</td><td class="right">Contact:</td></tr>
+          <tr class="row"><td class="left"><a href="index.html">Home</a></td><td class="right"><a href="url()">Email</a></td></tr>
+          <tr class="row"><td class="left"><a href="about.html">About</a></td><td class="right"><a href="url()">Phone</a></td></tr>
+          <tr class="row"><td class="left"><a href="credit.html">Credits</a></td><td class="right"><a href="url()">Instagram</a></td></tr>
+          <tr class="row"><td class="left"><a href="sitemap.html">Sitemap</a></td><td class="right"><a href="url()">Twitter</a></td></tr>
+        </table>
+      </footer>
+  
+      <p id="privacy">All Rights Reserved ++ Techno Gyár</p>
+
+      </body>
+</html>

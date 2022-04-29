@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Techno Gyár - About</title>
+    <meta name="keywords" content="what is techno; genres of techno; electronic music; techno factory; techno music; techno explained; 
+                                  techno gyar; what is techno gyar; about techno factory;">
+    <meta name="description" content="An all-about guide to undercovering the richness
+                                      and depth of Techno music.  Brought to you by
+                                      Techno Gyár :) ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/masterstyle.css">
+    <link rel="stylesheet" href="styles/contentstyle.css">
+    <link rel="stylesheet" href="js/anythingslider/css/anythingslider.css">
+
+    <style>
+
+      div.about {
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        padding: 30px;
+        border: 3px solid white;
+      }
+
+      div.about:hover {
+        border-color: #fe2c54;
+        transition: 0.5s ease 0.5s ease;
+        text-shadow: lightpink 1px 1px;
+        box-shadow: lightpink 9px 5px;
+      }
+
+      ul#slider{
+                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+      .hidden{
+        opacity: 0;
+      }
+
+      .interactivetext{
+        margin-top: 90px;
+        margin-left: 60px;
+        padding: 20px;
+        font-family: "overpass";
+        color: #ecf0f1;
+        font-size: 2em;
+      }
+
+      #techno {
+        margin-top: 20px;
+        background-color: #fe2c54;
+        border-radius: 5px;
+        padding: 4px;
+      }
+
+      #gyar {
+        margin-top: 20px;
+        background-color: #fe2c54;
+        border-radius: 5px;
+        padding: 4px;
+      }
+
+      #show {
+        margin-top: 30px;
+        margin-bottom: 80px;
+      }
+
+    </style>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+
+      /* This function corresponds to jQuery #1 */
+
+      $(function (){
+
+          $("#slider").anythingSlider({autoPlay: true, pauseOnHover:true});
+
+      });
+
+      /* These functions correspond to #2 */
+
+      function showText()
+      {
+        document.getElementById("show").innerHTML = "Gyár";
+      }
+
+      function showGyar()
+      {
+        document.getElementById("show").innerHTML = "Techno";
+      }
+
+
+    </script>
+
+  </head>
+
+  <body>
+    <header>
+        <a href="index.html"><img alt="logo" src="images/techno.png"></a> 
+        <nav>
+            <ul class="navlinks">
+                <li><a href="industrial.html">Industrial</a></li>
+                <li><a href="detroit.html">Detroit</a></li>
+                <li><a href="techhouse.html">Tech House</a></li>
+                <li><a href="minimal.html">Minimal</a></li>
+                <li><a href="trance.html">Trance</a></li>
+                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><button>Contact</button></a>
+    </header>
+
+    <hr>
+
+    
+    <div class="container">
+      <div class="overlay">
+       <h2>About</h2><br>
+       <h1>Your questions answered.</h1>
+   </div>
+   </div>
+
+   <hr id="line">
+
+    <div class="about">
+      <ul class="" id="slider">
+        <li><img src="images/s1.jpg" alt="slides" title="goodslides" width="700px" height="500px"/></li>
+        <li><img src="images/s2.jpg" alt="slides" title="goodslides" width="700px" height="500px"/></li>
+        <li><img src="images/s3.jpg" alt="slides" title="goodslides" width="700px" height="500px"/></li>
+        <li><img src="images/s4.jpg" alt="slides" title="goodslides" width="700px" height="500px"/></li>
+        <li><img src="images/s5.jpg" alt="slides" title="goodslides" width="700px" height="500px"/></li>
+    </ul>
+</div>
+<br><br>
+<hr id="line">
+
+<div class="interactivetext">
+  <h4>Press <span onclick="showText()" id="techno">Techno</span>, see Gyár.  Press <span onclick="showGyar()"id="gyar">Gyár</span>, see Techno!</h4>
+  <h2 id="show"></h2>
+</div>
+
+<hr id="line">
+
+<footer>
+  <table class="ft">
+    <tr class="top"><td class="left">Links:</td><td class="right">Contact:</td></tr>
+    <tr class="row"><td class="left"><a href="index.html">Home</a></td><td class="right"><a href="url()">Email</a></td></tr>
+    <tr class="row"><td class="left"><a href="about.html">About</a></td><td class="right"><a href="url()">Phone</a></td></tr>
+    <tr class="row"><td class="left"><a href="credit.html">Credits</a></td><td class="right"><a href="url()">Instagram</a></td></tr>
+    <tr class="row"><td class="left"><a href="sitemap.html">Sitemap</a></td><td class="right"><a href="url()">Twitter</a></td></tr>
+  </table>
+</footer>
+
+<p id="privacy">All Rights Reserved ++ Techno Gyár</p>
+
+</body>
+</html>

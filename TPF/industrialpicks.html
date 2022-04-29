@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Techno Gyár - Industrial Picks</title>
+    <meta name="keywords" content="what is techno; genres of techno; electronic music; techno factory; techno music; techno explained; 
+                                   techno gyar; best techno industrial songs; industrial techno best music; industrial techno artists;"> 
+    <meta name="description" content="An all-about guide to undercovering the richness
+                                      and depth of industrial techno music.  Brought to you by
+                                      Techno Gyár :) ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/masterstyle.css">
+
+    <style>
+
+      .rec {
+        font-family: "overpass";
+        color: #ecf0f1;
+        font-weight: 500;
+        font-size: 40px;
+      }
+
+      .recommend {
+        width: 60%;
+        margin-left:auto;
+        margin-right: auto;
+        padding-top: 50px;
+        text-align: center;
+      }
+
+      .video {
+        border: 2px solid white;
+      }
+
+      .artists {
+        font-family: "overpass";
+        color: #ecf0f1;
+        font-weight: 500;
+        font-size: 24px;
+      }
+
+    </style>
+
+    <script type="text/javascript">
+
+      /* This function corresponds to #5 */
+
+      var looper;
+      var degrees = 0;
+      function rotateGear(el, speed)
+      {
+        var elem = document.getElementById("rotater");
+        elem.style.transform = "rotate("+degrees+"deg)";
+        looper = setTimeout('rotateGear(\''+el+'\','+speed+')',speed);
+        degrees++;
+        if (degrees > 359)
+        {
+          degrees = 1;
+        }
+      }
+
+    </script>
+
+  </head>
+
+ <body onload="rotateGear()">
+  <header>
+    <a href="index.html"><img alt="logo" src="images/techno.png"></a> 
+    <nav>
+        <ul class="navlinks">
+            <li><a href="industrial.html">Industrial</a></li>
+            <li><a href="detroit.html">Detroit</a></li>
+            <li><a href="techhouse.html">Tech House</a></li>
+            <li><a href="minimal.html">Minimal</a></li>
+            <li><a href="trance.html">Trance</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+    </nav>
+    <a class="cta" href="contact.html"><button>Contact</button></a>
+</header>
+
+<hr>
+
+  <div class="recommend">
+  <h1 class="rec">Watch some proper Industrial Techno below!</h1> <br>
+  <img id="rotater" style="margin: 30px" width="30%" src="images/cog.png" alt="spinning gear" title="industrial techno gear">
+
+  <iframe  class="video" width="560" height="315" src="https://www.youtube.com/embed/64ZwsomlVDI"
+   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+   encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="recommend">
+    <h1 class="rec">Check out more of the best Industrial Artists!</h1><br>
+    <p class="artists"> Mick Harris aka Fret, Scorn, Lull </p>
+    <p class="artists"> JK Flesh </p>
+    <p class="artists"> Tommy Four Seven </p>
+    <p class="artists"> Manni Dee </p>
+  </div>
+
+  <hr id="line">
+
+  <footer>
+    <table class="ft">
+      <tr class="top"><td class="left">Links:</td><td class="right">Contact:</td></tr>
+      <tr class="row"><td class="left"><a href="index.html">Home</a></td><td class="right"><a href="url()">Email</a></td></tr>
+      <tr class="row"><td class="left"><a href="about.html">About</a></td><td class="right"><a href="url()">Phone</a></td></tr>
+      <tr class="row"><td class="left"><a href="credit.html">Credits</a></td><td class="right"><a href="url()">Instagram</a></td></tr>
+      <tr class="row"><td class="left"><a href="sitemap.html">Sitemap</a></td><td class="right"><a href="url()">Twitter</a></td></tr>
+    </table>
+  </footer>
+
+  <p id="privacy">All Rights Reserved ++ Techno Gyár</p>
+
+      
+ </body>
+
+</html>

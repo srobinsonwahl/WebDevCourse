@@ -12,16 +12,16 @@
     <script>
         
         var imgstoshow = new Array ("tiger5.jpg", "tiger6.jpg", "tiger7.jpg", "tiger8.jpg");
-        var caps = new Array ("This is Webtech", "This is Fun", "Teaches me Everything", "Under the Sun");
-        var imgcols = new Array ("Blue", "Red", "Green", "Orange");
+        var caps = new Array ("Moshing.", "Engaged.", "Vibrations.", "Dancing.", "Moving.", "Bumping.", "Loud.");
+        var imgcols = new Array ("Black", "Red", "Green", "Orange");
         var ctr = 0;
         
         
         function showSlides()
         {
             var myimg = document.getElementById("daimg");
-            myimg.src = mimgstoshow[ctr];
-            myimg.style.boxShadow = "20px 20px 10px " + imgcols[ctr];
+            myimg.src = imgstoshow[ctr];
+            myimg.style.boxShadow = "0px 0px 0px " + imgcols[ctr];
             document.getElementById("h").innerHTML = caps[ctr];
             ++ ctr; /* can also be written as  ctr = ctr + 1; */
             if (ctr > imgstoshow.length - 1)
@@ -39,7 +39,7 @@
             c = Math.floor(Math.random() * imgstoshow.length);
             myimg.src = imgstoshow[c];
             document.getElementById("h").innerHTML = caps[c];
-            myimg.style.boxShadow = "10px 10px 20px " + imgcols[c];
+            myimg.style.boxShadow = "0px 0px 0px " + imgcols[c];
         }
 
     </script>
@@ -53,7 +53,7 @@
     <h3 id="h"></h3>
     <!-- The above h3 will be used for showing a caption, if needed.-->
     <div id="b">
-        <button>Click to stop/resume</button>
+        <button onclick="showSlides()">Click to stop/resume</button>
     </div>
      
 </body>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<!--   JavaScript and jQuery Function List and location:
+
+    1.      Index.html = JavaScript button changing style of an element (line 117)
+    2.      About.html = JavaScript click text change text element (line 87)
+    3.      Cantact.html = JavaScript Form Validation (line 95)
+    4.      Index.html = JavaScript Slide Show (line 164)
+    5.      Industrialpicks.html = JavaScript Animation (line 49)
+    6.      Index.html = JavaScript conditional statement genre recommender (line 135)
+    j1.     About.html = jQuery Slider for slides (line 81)
+    j2.     Index.html = jQuery niceSelect for genre recommender (line 204)
+    j3.     Trance.html = jQuery mouseover change style of content (line 25)
+
+      I hope you enjoyed learning about the genres of techno :)    -->
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Techno Gyár - Electronica Factory</title>
+    <meta name="keywords" content="what is techno; genres of techno; electronic music; techno factory; techno music; techno explained; 
+                                  what is techno music; home page; techno gyar; techno home;">
+    <meta name="description" content="An all-about guide to understanding Techno music.  What are the genres
+                                      and subgenres, where is techno from?  What is techno?  Learn more at  
+                                      Techno Gyár.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/masterstyle.css">
+    <link rel="stylesheet" href="js/jquery-nice-select-1.1.0/jquery-nice-select-1.1.0/css/nice-select.css">
+
+  <style>
+
+    button#hide{
+      text-align: center;
+      margin-left: 642px;
+      margin-right: auto;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    .recomtext {
+      font-family: "overpass";
+      color: #ecf0f1;
+      text-shadow:  2px 5px #fe2c54, 6px 6px #fe2c54;
+      font-size: 1em;
+      text-align: center;
+      display: block;
+      padding-top: 80px;
+    }
+
+    h2#gen {
+      font-size: 4.5em;
+      text-align: center;
+    }
+
+    #listen{
+      font-family: "overpass";
+      background-color: #ecf0f1;
+      border-radius: 10px;
+      border-color: #fe2c54;
+      font-size: 2em;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-left: 300px;
+      margin-right: 300px;
+      margin-bottom: 80px;
+      margin-top: 80px;
+      display: block;
+      color: #fe2c54;
+    }
+
+    caption#f{
+      color: #fe2c54;
+      font-size: 3em;
+    }
+
+    option{
+      color: black;
+      background-color: darkslategray;
+    }
+
+    .genrerecommend {
+      margin-top: 100px;
+      margin-left: 400px;
+      margin-right: 400px;
+      margin-bottom: 100px;
+      padding: 20px;
+      text-align: center;
+      background-color: #ecf0f1;
+      border-radius: 8px;
+      min-width: 700px;
+    }
+
+    #change {
+      font-family: "overpass";
+      font-size: 5em;
+      background-color: #ecf0f1;
+      color: #fe2c54;
+      text-shadow: 2px 2px lightgray;
+    }
+
+    .current {
+      background-color: darkslategray;
+    }
+
+    p#genrerecommend, h3#h {min-height: 40%; max-height: 40%; font-size: 16px; text-align: center; margin-top: 30px; margin-bottom: 20px; font-family: "overpass"; color: #ecf0f1; }
+	  img#daimg{border-width: 3px; border-style: solid; width: 50%; height: 50%;}
+    button#stst {margin-bottom: 50px; width:150px; height:60px; background-color:#fe2c54;; font-family:"overpass"; color:#ecf0f1;}
+    div#b{text-align:center; }
+
+	</style>
+
+  <script>
+
+      /*  This function corresponds with #1. */
+
+      function hideMenu()
+      {
+        var display = document.getElementById("foothide").style.display;
+
+        if (display == "none")
+        {
+          document.getElementById("foothide").style.display = "block";
+        }   
+        else
+        {
+          document.getElementById("foothide").style.display = "none";
+        }
+      }
+
+      /* This function corresponds with #6 */
+
+      function showGenre()
+      {
+        var a = document.getElementById("listen");
+        var b = a.sounds.value;
+        var c = document.getElementById("change");
+        event.preventDefault();
+
+        if (b == "indus")
+        {
+          c.innerHTML = "Industrial techno";
+        }
+        else if (b == "detro")
+        {
+          c.innerHTML = "Detroit techno";
+        }
+        else if (b == "thouse")
+        {
+          c.innerHTML = "Tech House";
+        }
+        else if (b == "minim")
+        {
+          c.innerHTML = "Minimal Techno";
+        }
+        else
+        {
+          c.innerHTML = "Trance techno";
+        }
+      }
+
+      /* These functions correspond with #4 */
+
+        var imgstoshow = new Array ("images/crowd.jpg", "images/dot1.jpg", "images/dot3.jpg", "images/dot2.jpg", "images/dot5.jpg", "images/dot6.jpg", "images/dot8.jpg");
+        var caps = new Array ("Moshing.", "Engaged.", "Vibrations.", "Dancing.", "Moving.", "Bumping.", "Loud.");
+        /* I turned off the shadows below for the sake of the look of my website */
+        var imgcols = new Array ("Black", "Red", "Green", "Orange");
+        var ctr = 0;
+        
+        
+        function showSlides()
+        {
+            var myimg = document.getElementById("daimg");
+            myimg.src = imgstoshow[ctr];
+            myimg.style.boxShadow = "0px 0px 0px " + imgcols[ctr];
+            document.getElementById("h").innerHTML = caps[ctr];
+            ++ ctr; /* can also be written as  ctr = ctr + 1; */
+            if (ctr > imgstoshow.length - 1)
+            {
+                ctr = 0;
+            }
+            setTimeout("showSlides()", 3000);
+        }
+        
+
+        function ssran()
+        {
+            var myimg = document.getElementById("daimg");
+            var c;
+            c = Math.floor(Math.random() * imgstoshow.length);
+            myimg.src = imgstoshow[c];
+            document.getElementById("h").innerHTML = caps[c];
+            myimg.style.boxShadow = "0px 0px 0px " + imgcols[c];
+        }
+    
+  </script>
+
+  <script src="js/jquery-nice-select-1.1.0/jquery-nice-select-1.1.0/js/jquery.js"></script>
+  <script src="js/jquery-nice-select-1.1.0/jquery-nice-select-1.1.0/js/jquery.nice-select.js"></script>
+  <script>
+
+    /* This function corresponds with jQuery #2 */
+
+    $(document).ready(function(){
+      $("select").niceSelect();
+    });
+
+  </script>
+  </head>
+
+  <body onload="ssran()">
+    <header>
+        <a href="index.html"><img alt="logo" src="images/techno.png"></a> 
+        <nav>
+            <ul class="navlinks">
+                <li><a href="industrial.html">Industrial</a></li>
+                <li><a href="detroit.html">Detroit</a></li>
+                <li><a href="techhouse.html">Tech House</a></li>
+                <li><a href="minimal.html">Minimal</a></li>
+                <li><a href="trance.html">Trance</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="contact.html"><button>Contact</button></a>
+    </header>
+
+    <hr>
+
+          <!--The Video is located on the industrialpicks.htm Page that is linked at the bottom
+                                  of the Industrial Page-->
+
+    <div class="container">
+      <div class="image">
+    <img id="crowd" src="images/crowd.jpg" alt="crowd">
+      </div>
+      <div class="text">
+        <div class="title"><h2>Techno Gyár.</h2></div>
+        <div class="description"><h1>Learn and listen with friends here!</h1></div>
+      </div>
+    </div>
+
+    <hr id="line">
+    <div class="homeblock">
+      <div class="homesummary"> Techno is a genre of electronic music that never stops developing in sound.<br>
+                        Characterized by unweilded sound effects, hard-pumping baselines, and <br>
+                        hypnotic stand-alone rhythms, techno has made its way across hundreds of <br>
+                        countries.  With its origins formed in Berlin, Germany, the techno scene <br>
+                        is very popular across eastern Europe, as well as Latin America. 
+      </div>
+
+      <div class="pimg"><img id="gif" src="images/techno.png"></div>
+    </div>
+
+    <hr id="line">
+
+    <div class="container">
+      <div class="recomtext">
+        <h2 id="gen">What genre suits you?  Find out here:</h2>
+      </div>
+      <div class="recom">
+        <form id="listen"><caption id="f">Select which sounds resonate with you!&nbsp;&nbsp;&nbsp;</caption>
+          <select onchange="showGenre()" name="sounds">
+            <option value="indus">Gritty, dark, hard-hitting</option>
+            <option value="detro">Funky, futuristic, refined</option>
+            <option value="thouse">Metallic, light, dance</option>
+            <option value="minim">Bare, catchy, new</option>
+            <option value="trance">Hypnotic, layered, moving</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+    <div class="genrerecommend">
+      <div id="change" class="genre">Your genre here:</div>
+    </div>
+
+    <hr id="line">
+
+    <p id="genrerecommend" id="ssh">
+      <img id="daimg" src="images/crowd.jpg" alt="slide show" title="Slide Show of Images">
+    </p>
+    <h3 id="h"></h3>
+    <!-- The above h3 will be used for showing a caption, if needed.-->
+    <div id="b">
+        <button id="stst" onclick="showSlides()">Click to see Gyár</button>
+    </div>
+
+    <hr id="line">
+
+    <button onclick="hideMenu()" id="hide">Press to hide menu below</button>
+    <footer id="foothide">
+      <table class="ft">
+        <tr class="top"><td class="left">Links:</td><td class="right">Contact:</td></tr>
+        <tr class="row"><td class="left"><a href="index.html">Home</a></td><td class="right"><a href="url()">Email</a></td></tr>
+        <tr class="row"><td class="left"><a href="about.html">About</a></td><td class="right"><a href="url()">Phone</a></td></tr>
+        <tr class="row"><td class="left"><a href="credit.html">Credits</a></td><td class="right"><a href="url()">Instagram</a></td></tr>
+        <tr class="row"><td class="left"><a href="sitemap.html">Sitemap</a></td><td class="right"><a href="url()">Twitter</a></td></tr>
+      </table>
+    </footer>
+
+    <p id="privacy">All Rights Reserved ++ Techno Gyár</p>
+
+  
+  </body>
+
+</html>
